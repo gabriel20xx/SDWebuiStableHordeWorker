@@ -159,7 +159,7 @@ class FilenameGenerator:
         if len(words) == 0:
             words = ["empty"]
         return sanitize_filename_part(
-            " ".join(words[0: opts.directories_max_prompt_words]), replace_spaces=False
+            " ".join(words[0 : opts.directories_max_prompt_words]), replace_spaces=False
         )
 
     def datetime(self, *args):

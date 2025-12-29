@@ -1361,6 +1361,7 @@ def on_ui_tabs():
                 save_apikey = gr.Button("Save", elem_id=f"{tab_prefix}apikey-save")
 
             with gr.Column():
+
                 def toggle_running_fn(status, running_type, toggle_running):
                     if config.enabled:
                         config.enabled = False
@@ -1375,7 +1376,7 @@ def on_ui_tabs():
                         gr.Info("Generation Enabled")
                     config.save()
                     return status, running_type, toggle_running
-            
+
                 status = gr.Textbox(
                     f'{"Running" if config.enabled else "Stopped"}',
                     label="Status",
